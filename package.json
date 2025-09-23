@@ -1,0 +1,29 @@
+{
+  "name": "mcp-search-products",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "MCP server exposing a searchProducts tool backed by a catalog API.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc --project tsconfig.json",
+    "start": "node dist/index.js",
+    "test": "vitest run"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.1",
+    "dotenv": "^16.4.5",
+    "undici": "^6.18.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.2"
+  }
+}
