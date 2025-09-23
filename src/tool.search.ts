@@ -10,16 +10,21 @@ const sortOptions = [
   "discount_desc",
 ] as const;
 
+const optionalString = z.preprocess(
+  (value) => (value === null ? undefined : value),
+  z.string().optional()
+);
+
 export const searchProductsParams = {
   storeId: z.string().min(1),
-  q: z.string().optional(),
+  q: optionalString,
   page: z.number().int().min(0).default(0),
   size: z.number().int().min(1).max(200).default(20),
   sort: z.array(z.enum(sortOptions)).optional(),
   minPrice: z.number().optional(),
   maxPrice: z.number().optional(),
-  categoryIds: z.string().optional(),
-  brandIds: z.string().optional(),
+  categoryIds: optionalString,
+  brandIds: optionalString,
 } satisfies z.ZodRawShape;
 
 const pageMetaSchema = z.object({
@@ -38,11 +43,11 @@ const productImageSchema = z.object({
 
 const productSchema = z.object({
   id: z.string(),
-  externalId: z.string().optional(),
-  sku: z.string().optional(),
-  ean: z.string().optional(),
-  name: z.string().optional(),
-  description: z.string().optional(),
+  externalId: optionalString,
+  sku: optionalString,
+  ean: optionalString,
+  name: optionalString,
+  description: optionalString,
   images: z.array(productImageSchema).optional(),
 });
 

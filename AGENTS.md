@@ -44,6 +44,9 @@ mcp-search-products/
 BASE_URL=https://<your-host>
 AUTH_BEARER=xxxxx
 TIMEOUT_MS=10000
+STORE_ID=
+STORE_NAME=
+STORE_LIST=
 ```
 
 ---
@@ -191,7 +194,10 @@ main().catch(e => {
       "env": {
         "BASE_URL": "https://<your-host>",
         "AUTH_BEARER": "xxxxx",
-        "TIMEOUT_MS": "10000"
+        "TIMEOUT_MS": "10000",
+        "STORE_ID": "<store-id>",
+        "STORE_NAME": "<store-name>",
+        "STORE_LIST": "[{\"id\":\"<store-id>\",\"name\":\"<store-name>\"}]"
       }
     }
   }
@@ -201,6 +207,9 @@ main().catch(e => {
 ---
 
 ## Example Prompts for Claude
+- "List stores".
+- "Search for the Vivanda Centro store".
+- "Select the store with id 12345".
 - "Search products in store 12345 for 'galleta', size 10, sorted by price_desc."
 - "List products in store 12345 with minPrice 50, maxPrice 200, sorted by score_desc."
 
