@@ -49,6 +49,9 @@ STORE_NAME=
 STORE_LIST=
 ```
 
+Default fallback stores (used when the env variables above are unset) are defined in
+`src/tool.store.ts` on the `DEFAULT_STORES` constant.
+
 ---
 
 ## Types (src/types.ts)

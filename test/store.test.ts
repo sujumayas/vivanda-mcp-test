@@ -79,9 +79,19 @@ describe("store tools", () => {
     expect(result.stores).toEqual([]);
   });
 
-  it("throws when no stores configured", async () => {
+  it("falls back to default stores when env not set", async () => {
     delete process.env.STORE_ID;
     delete process.env.STORE_LIST;
-    await expect(listStores.handler()).rejects.toThrow(/No stores configured/);
+    delete process.env.STORE_NAME;
+    const result = await listStores.handler();
+    expect(result.stores).toEqual([
+      { id: "4e68a220-db2a-4328-83e9-ecd029977945", name: "Vivanda San Isidro", selected: true },
+    ]);
+  });
+
+  it("throws for invalid STORE_LIST JSON", async () => {
+    delete process.env.STORE_ID;
+    process.env.STORE_LIST = "not-json";
+    await expect(listStores.handler()).rejects.toThrow(/Invalid STORE_LIST JSON/);
   });
 });

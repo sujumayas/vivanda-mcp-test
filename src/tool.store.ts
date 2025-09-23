@@ -6,6 +6,15 @@ const storeConfigSchema = z.object({
   name: z.string().min(1),
 });
 
+// Default stores used when environment variables do not provide any configuration.
+// Update this list to expose additional stores by default.
+const DEFAULT_STORES: StoreInfo[] = [
+  {
+    id: "4e68a220-db2a-4328-83e9-ecd029977945",
+    name: "Vivanda San Isidro",
+  },
+];
+
 const storeSchema = storeConfigSchema.extend({
   selected: z.boolean().optional(),
 });
@@ -32,6 +41,10 @@ type AssertStoreList = z.infer<typeof storeListSchema> extends StoreListResponse
 type _StoreInfoCheck = AssertStoreInfo;
 type _StoreListCheck = AssertStoreList;
 
+function cloneStores(stores: StoreInfo[]): StoreInfo[] {
+  return stores.map((store) => ({ ...store }));
+}
+
 function getConfiguredStores(): StoreInfo[] {
   const rawList = process.env.STORE_LIST;
   if (rawList && rawList.trim() !== "") {
@@ -42,11 +55,14 @@ function getConfiguredStores(): StoreInfo[] {
       throw new Error("Invalid STORE_LIST JSON. Expected an array of { id, name } objects.");
     }
     const stores = z.array(storeConfigSchema).parse(parsed);
-    return stores;
+    return cloneStores(stores);
   }
 
   const storeId = process.env.STORE_ID;
   if (!storeId) {
+    if (DEFAULT_STORES.length > 0) {
+      return cloneStores(DEFAULT_STORES);
+    }
     return [];
   }
 

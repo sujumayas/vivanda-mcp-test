@@ -24,6 +24,9 @@ Node + TypeScript Model Context Protocol (MCP) server providing tools to pick a 
    - `STORE_LIST`: Optional JSON array of `{ "id": string, "name": string }` entries when multiple stores are available
    - `HEADER_*`: Any extra headers to send (e.g. `HEADER_X_APPLICATION=MRK`)
 
+3. (Optional) Update the default store catalog exposed when no environment overrides are present. The list lives in
+   `src/tool.store.ts` under the `DEFAULT_STORES` constant.
+
 ## Development
 - Run the MCP server in watch mode:
   ```sh

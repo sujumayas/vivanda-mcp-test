@@ -3,6 +3,36 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { searchProducts, searchProductsParams } from "./tool.search.js";
 import { listStores, searchStores, selectStore, selectStoreParams } from "./tool.store.js";
+import type { ProductSearchResponse, StoreListResponse } from "./types.js";
+
+function summarizeStores(response: StoreListResponse): string {
+  if (response.stores.length === 0) {
+    return "No stores configured.";
+  }
+  const lines = response.stores.map((store) => {
+    const selected = store.selected ? " [selected]" : "";
+    return `${store.name} (${store.id})${selected}`;
+  });
+  return `Stores (${response.stores.length}):\n${lines.join("\n")}`;
+}
+
+function summarizeSearch(response: ProductSearchResponse): string {
+  const { items, page } = response;
+  const pageNumber = page.number + 1;
+  const totalPages = page.totalPages > 0 ? page.totalPages : 1;
+  if (items.length === 0) {
+    return `No products found (page ${pageNumber} of ${totalPages}).`;
+  }
+  const preview = items
+    .slice(0, 5)
+    .map((product) => {
+      const name = product.name ?? "Unnamed product";
+      const sku = product.sku ?? product.id;
+      return `- ${name} [${sku}]`;
+    })
+    .join("\n");
+  return `Found ${page.totalElements} products (showing ${items.length} on page ${pageNumber} of ${totalPages}).\n${preview}`;
+}
 
 async function main() {
   const server = new McpServer({ name: "cord-search-products", version: "0.1.0" });
@@ -18,7 +48,12 @@ async function main() {
     async (_args, _extra) => {
       const result = await listStores.handler();
       return {
-        content: [],
+        content: [
+          {
+            type: "text",
+            text: summarizeStores(result),
+          },
+        ],
         structuredContent: result as unknown as Record<string, unknown>,
       };
     }
@@ -35,7 +70,12 @@ async function main() {
     async (args, _extra) => {
       const result = await searchStores.handler(args);
       return {
-        content: [],
+        content: [
+          {
+            type: "text",
+            text: summarizeStores(result),
+          },
+        ],
         structuredContent: result as unknown as Record<string, unknown>,
       };
     }
@@ -52,7 +92,12 @@ async function main() {
     async (args, _extra) => {
       const result = await selectStore.handler(args);
       return {
-        content: [],
+        content: [
+          {
+            type: "text",
+            text: summarizeStores(result),
+          },
+        ],
         structuredContent: result as unknown as Record<string, unknown>,
       };
     }
@@ -69,7 +114,12 @@ async function main() {
     async (args, _extra) => {
       const result = await searchProducts.handler(args);
       return {
-        content: [],
+        content: [
+          {
+            type: "text",
+            text: summarizeSearch(result),
+          },
+        ],
         structuredContent: result as unknown as Record<string, unknown>,
       };
     }
