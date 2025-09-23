@@ -1,0 +1,14 @@
+{
+  "externalId": "FOOD",
+  "shortName": "Alimentos",
+  "fullName": "Productos Alimenticios",
+  "description": "Todo tipo de alimentos frescos y empacados",
+  "colorHex": "#FE0000",
+  "indexingInfo": {
+    "permalink": "alimentos-frescos-empacados-0123",
+    "keywords": "comida, alimentos, frescos, orgánicos",
+    "metaTitle": "Categorías | Alimentos Frescos y Empacados",
+    "metaDescription": "Encuentra todo tipo de alimentos frescos, empacados y orgánicos para tu hogar",
+    "deepLinkDescription": "Encuentra todo tipo de alimentos frescos, empacados y orgánicos para tu hogar"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Promoción Black Friday",
+  "redirectUrl": "https://www.oechsle.pe/promociones/black-friday-2024",
+  "triggerRules": {
+    "logicalOperator": "or",
+    "conditions": [
+      {
+        "term": "black friday",
+        "operator": "is"
+      },
+      {
+        "term": "blackfriday",
+        "operator": "is"
+      },
+      {
+        "term": "viernes negro",
+        "operator": "is"
+      },
+      {
+        "term": "black",
+        "operator": "contains"
+      }
+    ]
+  },
+  "status": "ACTIVE"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Documentación de referencia" id="reference-documentation">
+
+    <section-starting-page>
+        <title>Documentación de referencia</title>
+        <description>
+            Encuentra toda la documentación necesaria para el entendimiento de los conceptos de negocio.
+        </description>
+
+        <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
+        <spotlight>
+            <a href="multi-brand-store-management.md" type="branch"/>
+            <a href="product-catalog-doc.md" type="search"/>
+        </spotlight>
+
+        <!--    Add several topics that are most important for this section.    -->
+        <primary>
+            <title>Algunos conceptos básicos</title>
+            <a href="categories-model-doc.md"/>
+            <a href="products-model-doc.md"/>
+        </primary>
+
+    </section-starting-page>
+
+</topic>

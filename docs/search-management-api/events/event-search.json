@@ -1,0 +1,10 @@
+{
+  "eventType": "productClicked",
+  "payload": {
+    "searchTerm": "zapatillas deportivas",
+    "productId": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+    "position": 3,
+    "sessionId": "b9876543-210f-edcb-a987-654321fedcba",
+    "view": "searchResults"
+  }
+}

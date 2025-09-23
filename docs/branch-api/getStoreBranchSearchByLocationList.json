@@ -1,0 +1,28 @@
+[
+  {
+    "storeId": "92bb3bcf-4e67-4026-8415-53acc99128af",
+    "storeSubsidiaryId": "2b1c2cfd-ccb9-479f-8771-312b26ace2ab",
+    "name": "PLAZA VEA",
+    "imageUrl": "https://http2.mlstatic.com/leche-gloria-tableta-x-24-uni-D_NQ_NP_847854-MPE41270927580_032020-F.jpg",
+    "smallImageUrl": "https://http2.mlstatic.com/leche-gloria-tableta-x-24-uni-D_NQ_NP_847854-MPE41270927580_032020-F.jpg",
+    "backgroundHex": "FF0000",
+    "fontHex": "FF0000",
+    "productCount": 3190,
+    "minAmountPurchase": 0,
+    "serviceCost": 0,
+    "deliveryCost": 0,
+    "approximateStartDeliveryTime": 0,
+    "approximateEndDeliveryTime": 0,
+    "enableClubRewardPayment": true,
+    "commerceTerminalCode": "IOU000981723X",
+    "storeToken": "IOU000981723X",
+    "trackType": "string",
+    "trackName": "string",
+    "trackNumber": "string",
+    "districtName": "string",
+    "storeName": "string",
+    "latitude": 0,
+    "longitude": 0,
+    "hasInvoiceEnabled": true
+  }
+]

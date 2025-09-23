@@ -1,0 +1,48 @@
+[
+  {
+    "type": "type:blank",
+    "title": "Bad request",
+    "status": 400,
+    "detail": "La URL de imagen no es válida",
+    "instance": "/catalog/management/v2/stores/{storeId}/categories"
+  }
+  ,
+  {
+    "type": "type:blank",
+    "title": "Conflict",
+    "status": 409,
+    "detail": "El external id ya está en uso",
+    "instance": "/catalog/management/v2/stores/{storeId}/categories",
+    "properties": {
+      "code": "CATEGORY_EXTERNAL_ID_CONFLICT"
+    }
+  }
+  ,
+  {
+    "type": "type:blank",
+    "title": "Not found",
+    "status": 404,
+    "detail": "No se encontró la categoría",
+    "instance": "/catalog/management/v2/stores/{storeId}/categories/{categoryId}",
+    "properties": {
+      "code": "CATEGORY_NOT_FOUND"
+    }
+  },
+  {
+    "type": "type:blank",
+    "title": "Conflict",
+    "status": 409,
+    "detail": "La categoría tiene productos asociados",
+    "instance": "/catalog/management/v2/stores/{storeId}/categories/{categoryId}",
+    "properties": {
+      "code": "CATEGORY_HAS_ASSOCIATED_PRODUCTS"
+    }
+  },
+  {
+    "type": "type:blank",
+    "title": "Bad request",
+    "status": 400,
+    "detail": "El atributo no está permitido",
+    "instance": "/catalog/management/v2/stores/{storeId}/categories"
+  }
+]

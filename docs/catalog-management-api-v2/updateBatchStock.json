@@ -1,0 +1,28 @@
+[
+  {
+    "productId": "ec3aa64c-646a-46aa-84da-e419d7556638",
+    "stock": [
+      {
+        "branchId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "stock": 150.00
+      },
+      {
+        "branchId": "4gb96g75-6828-5673-c4gd-3d074g77bgb7",
+        "stock": 75.50
+      }
+    ]
+  },
+  {
+    "productId": "bd4bb75d-1234-56cd-78ef-901234567890",
+    "stock": [
+      {
+        "branchId": "ab12c34d-5678-90ab-cdef-1234567890ab",
+        "stock": 200.00
+      },
+      {
+        "branchId": "cd34e56f-7890-12ab-cdef-34567890abcd",
+        "stock": 120.00
+      }
+    ]
+  }
+]

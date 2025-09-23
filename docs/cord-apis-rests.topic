@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="REST APIs" id="cord-apis-rests">
+
+
+    <section-starting-page>
+        <title>Introducción a las APIs</title>
+        <description>
+            Incluyen gestión de catálogo, búsqueda,
+            clientes, carrito y órdenes.
+        </description>
+
+        <!--    Add up to 2 topics that you want to promote. Use the "bagde", "image", or "icon" attribute to set an icon.    -->
+        <spotlight>
+            <a href="cord-api-reference.md" type="start">Overview</a>
+            <a href="cord-rest-api-authentication.md" type="lock">Autenticación</a>
+        </spotlight>
+
+        <!--    Add several topics that are most important for this section.    -->
+        <primary>
+            <title>Comienza aquí</title>
+            <a href="catalog-management-api_reference.md"/>
+            <a href="search-v2-api-reference.md"/>
+            <a href="iam_service_api_reference.md"/>
+        </primary>
+
+        <!--    Add several topics that are less important or are relevant only for advanced/experienced users.    -->
+        <secondary>
+            <title>Catálogo completo de APIs</title>
+            <a href="products-management-api-reference.md"/>
+            <a href="categories-management-api_reference.md"/>
+            <a href="brands-management-api_reference.md"/>
+            <a href="collections-management-api_reference.md"/>
+            <a href="search-v2-api-reference.md"/>
+            <a href="payment-methods-service-api_reference.md"/>
+            <a href="iam_service_api_reference.md"/>
+            <a href="customer_service_api_reference.md"/>
+            <a href="fulfillment_service_api_reference.md"/>
+        </secondary>
+
+    </section-starting-page>
+
+</topic>

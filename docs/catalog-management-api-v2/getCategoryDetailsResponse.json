@@ -1,0 +1,42 @@
+{
+  "id": "c04556fc-0380-4913-b22b-990dcde59d10",
+  "externalId": "HAIR",
+  "shortName": "Cuidado Capilar",
+  "fullName": "Productos para el Cabello",
+  "description": "Todo tipo de productos para el cuidado de tu cabello",
+  "colorHex": "#FFB703",
+  "imageUrl": "https://images.cord.pe/lib/m/hair_care.png",
+  "keywords": "cabello, shampoo, acondicionador, tratamientos, estilizado",
+  "permalink": "cuidado-capilar-productos-cabello",
+  "metaTitle": "Cuidado Capilar - Productos para el Cabello",
+  "metaDescription": "Los mejores productos para mantener tu cabello saludable y hermoso",
+  "deepLinkDescription": "Los mejores productos para mantener tu cabello saludable y hermoso",
+  "childrenCount": 1,
+  "level": 1,
+  "productsCount": 100,
+  "parent": {
+    "id": "07aa7e87-e06e-41c6-b3d3-82e3226296fd",
+    "externalId": "BEAUTY",
+    "shortName": "Cuidado Personal",
+    "fullName": "Productos de Cuidado Personal"
+  },
+  "status": "ACTIVE",
+  "children": [
+    {
+      "id": "4743caa3-e9c7-4306-bd7e-145fea7a3694",
+      "externalId": "SHAMP",
+      "shortName": "Shampoo",
+      "fullName": "Shampoo y Acondicionadores"
+    }
+  ],
+  "attributes": [
+    {
+      "attributeName": "ORIGIN",
+      "searchable": true
+    },
+    {
+      "attributeName": "SIZE",
+      "searchable": true
+    }
+  ]
+}

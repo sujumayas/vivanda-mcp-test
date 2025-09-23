@@ -1,0 +1,36 @@
+[
+  {
+    "productId": "ec3aa64c-646a-46aa-84da-e419d7556638",
+    "specifications": [
+      {
+        "attribute": "COLOR",
+        "value": "Azul"
+      },
+      {
+        "attribute": "SIZE",
+        "value": "M"
+      },
+      {
+        "attribute": "MATERIAL",
+        "value": "Algodón 100%"
+      }
+    ]
+  },
+  {
+    "productId": "d6014277-eb11-4a38-b87e-cff1e12a2203 ",
+    "specifications": [
+      {
+        "attribute": "COLOR",
+        "value": "Negro"
+      },
+      {
+        "attribute": "SIZE",
+        "value": "L"
+      },
+      {
+        "attribute": "MATERIAL",
+        "value": "Algodón 100%"
+      }
+    ]
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "type": "type:blank",
+    "title": "Bad request",
+    "status": 400,
+    "detail": "La URL de imagen no es válida",
+    "instance": "/catalog/management/v2/stores/store-id/products"
+  }
+  ,
+  {
+    "type": "type:blank",
+    "title": "Conflict",
+    "status": 409,
+    "detail": "El external id ya está en uso",
+    "instance": "/catalog/management/v2/stores/store-id/products",
+    "properties": {
+      "code": "PRODUCT_EXTERNAL_ID_ALREADY_USED"
+    }
+  }
+  ,
+  {
+    "type": "type:blank",
+    "title": "Not found",
+    "status": 404,
+    "detail": "No se encontró el producto",
+    "instance": "/catalog/management/v2/stores/store-id/products/product-id",
+    "properties": {
+      "code": "PRODUCT_NOT_FOUND"
+    }
+  }
+  ,
+  {
+    "type": "type:blank",
+    "title": "Unprocessable Entity",
+    "status": 422,
+    "detail": "Algunos productos no pueden ser habilitados",
+    "instance": "/catalog/management/v2/stores/{storeId}/products/enabled-products",
+    "properties": {
+      "code": "PRODUCT_CANNOT_BE_ENABLED"
+    }
+  }
+  ,
+  {
+    "type": "type:blank",
+    "title": "Bad request",
+    "status": 400,
+    "detail": "Sólo son aceptados valores de tipo numérico o texto",
+    "instance": "/catalog/management/v2/stores/store-id/products/product-id/specifications"
+  }
+  ,
+  {
+    "type": "type:blank",
+    "title": "Unprocessable Entity",
+    "status": 422,
+    "detail": "El atributo no es soportado por la categoría asociada al producto",
+    "instance": "/catalog/management/v2/stores/store-id/products/product-id/specifications",
+    "properties": {
+      "code": "ATTRIBUTE_NOT_SUPPORT_BY_CATEGORY"
+    }
+  }
+  ,
+  {
+    "type": "type:blank",
+    "title": "Bad request",
+    "status": 400,
+    "detail": "El monto del precio debe ser mayor a 0",
+    "instance": "/catalog/management/v2/stores/store-id/products/product-id/prices"
+  }
+  ,
+  {
+    "type": "type:blank",
+    "title": "Conflict",
+    "status": 409,
+    "detail": "Se intenta configurar 2 precios para el mismo producto y sucursal",
+    "instance": "/catalog/management/v2/stores/store-id/products/prices",
+    "properties": {
+      "code": "PRODUCT_PRICE_BRANCH_CONFLICT"
+    }
+  }
+  ,
+  {
+    "type": "about:blank",
+    "title": "Bad Request",
+    "status": 400,
+    "detail": "Invalid request content.",
+    "instance": "/catalog/management/v2/stores/store-id/products/product-id/discount",
+    "properties": null
+  }
+  ,
+  {
+    "type": "type:blank",
+    "title": "Not Found",
+    "status": 404,
+    "detail": "Product regular price not found",
+    "instance": "/catalog/management/v2/stores/store-id/products/product-id/discount",
+    "properties": {
+      "code": "PRODUCT_REGULAR_PRICE_NOT_FOUND"
+    }
+  }
+  ,
+  {
+    "type": "about:blank",
+    "title": "Conflict",
+    "status": 409,
+    "detail": "Product final promotional price can't be grater than regular price",
+    "instance": "/catalog/management/v2/stores/store-id/products/product-id/discount",
+    "properties": {
+      "code": "PRODUCT_FINAL_PROMOTIONAL_PRICE_CONFLICT"
+    }
+  }
+  ,
+  {
+    "type": "about:blank",
+    "title": "Not Found",
+    "status": 404,
+    "detail": "Discount price not found.",
+    "instance": "/catalog/management/v2/stores/store-id/products/product-id/discount/discount-price-id",
+    "properties": {
+      "code": "PRODUCT_DISCOUNT_PRICE_NOT_FOUND"
+    }
+  }
+]

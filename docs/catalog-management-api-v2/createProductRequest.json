@@ -1,0 +1,51 @@
+[
+  {
+    "externalId": "product-code",
+    "sku": "BLK-MED-G123-GUC",
+    "ean": "978020137962",
+    "name": "Leche Gloria",
+    "description": "Tarro de Leche Gloria de 500gr",
+    "images": [
+      {
+        "url": "https://example.com/images/leche-gloria.jpg",
+        "altText": "Leche Gloria",
+        "order": 0
+      }
+    ],
+    "brand": {
+      "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+      "name": "Gloria"
+    },
+    "category": {
+      "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+      "externalId": "CAT-001"
+    },
+    "showWithoutStock": true,
+    "seo": {
+      "keywords": "leche, leche entera, gloria",
+      "permalink": "leche-gloria-lata-250ml",
+      "metaTitle": "Leche Gloria Lata 250ml",
+      "metaDescription": "Leche Gloria Lata 250ml"
+    },
+    "basePrice": {
+      "amount": 103.9,
+      "currency": "PEN"
+    },
+    "stockManagement": {
+      "unit": "KILOGRAM",
+      "quantity": 0.5
+    },
+    "nutritionalWarnings": [
+      "HIGH_IN_SUGAR"
+    ],
+    "dimensions": {
+      "heightInCm": 50.3,
+      "widthInCm": 50.3,
+      "lengthInCm": 50.3,
+      "weightInGrams": 1200.5
+    },
+    "status": "ACTIVE",
+    "releaseDate": "2026-01-01T00:00:00",
+    "score": 10
+  }
+]

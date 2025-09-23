@@ -1,0 +1,22 @@
+[
+  {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "branchId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "amount": 103.9,
+    "currency": "PEN",
+    "type": "REGULAR",
+    "volumePrice": false,
+    "quantity": 1,
+    "startDate": "2025-05-30T16:51:43.962Z"
+  },
+  {
+    "id": "ccaba657-6814-46dd-aa45-f2a185e4f8b8",
+    "branchId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "amount": 499.90,
+    "currency": "PEN",
+    "type": "BULK",
+    "volumePrice": true,
+    "quantity": 6,
+    "startDate": "2025-05-30T16:51:43.962Z"
+  }
+]

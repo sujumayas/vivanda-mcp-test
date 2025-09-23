@@ -1,0 +1,33 @@
+[
+  {
+    "productId": "2lfUfPvOjDi",
+    "prices": [
+      {
+        "branchId": "dc08ce97-0e18-4039-ab4c-c436a407afc2",
+        "amount": "3000",
+        "currency": "PEN"
+      },
+      {
+        "branchId": "dc08ce97-0e18-4039-ab4c-c436a407afc2",
+        "quantity": "10",
+        "amount": "27000",
+        "currency": "PEN"
+      },
+      {
+        "branchId": "dc08ce97-0e18-4039-ab4c-c436a407bde7",
+        "amount": "1000",
+        "currency": "PEN"
+      }
+    ]
+  },
+  {
+    "productId": "3FnQ5wkGOI9",
+    "prices": [
+      {
+        "branchId": "dc08ce97-0e18-4039-ab4c-c436a407afc2",
+        "amount": "3000",
+        "currency": "PEN"
+      }
+    ]
+  }
+]

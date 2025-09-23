@@ -1,0 +1,69 @@
+{
+  "page": {
+    "number": 2,
+    "size": 10,
+    "totalElements": 157,
+    "totalPages": 16,
+    "empty": "false"
+  },
+  "items": [
+      {
+        "id": "A1b2C3d4E5f",
+        "name": "zapatillas urbanas",
+        "redirectUrl": "https://www.oechsle.pe/coleccion/?q=H:12719",
+        "triggerRules": {
+          "logicalOperator": "or",
+          "conditions": [
+            {
+              "term": "zapatillas urbanas",
+              "operator": "is"
+            },
+            {
+              "term": "zapatilla urbana",
+              "operator": "is"
+            },
+            {
+              "term": "zapatillas urbana",
+              "operator": "is"
+            },
+            {
+              "term": "urbanas zapatillas",
+              "operator": "is"
+            },
+            {
+              "term": "zapatillas urbans",
+              "operator": "contains"
+            }
+          ]
+        },
+        "status": "ACTIVE"
+      },
+      {
+        "id": "B9x8Y7w6V5u",
+        "name": "Promoción Black Friday",
+        "redirectUrl": "https://www.oechsle.pe/promociones/black-friday-2024",
+        "triggerRules": {
+          "logicalOperator": "or",
+          "conditions": [
+            {
+              "term": "black friday",
+              "operator": "is"
+            },
+            {
+              "term": "blackfriday",
+              "operator": "is"
+            },
+            {
+              "term": "viernes negro",
+              "operator": "is"
+            },
+            {
+              "term": "black",
+              "operator": "contains"
+            }
+          ]
+        },
+        "status": "ACTIVE"
+      }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "page": {
+    "number": 0,
+    "size": 1,
+    "totalElements": 1,
+    "totalPages": 1,
+    "empty": false
+  },
+  "items": [
+    {
+      "id": "9aeaef40-eca1-4ec5-ae9c-d84d2f7b48ff",
+      "sku": "CHC-MNT-B456-HRS",
+      "ean": "978020137963",
+      "externalId": "candy-001",
+      "name": "Chocolate Hershey's",
+      "description": "Barra de chocolate con menta Hershey's de 100gr",
+      "images": [
+        {
+          "id": "31505654-e6b6-487e-9901-26ee3cb44be2",
+          "url": "https://example.com/images/hersheys-chocolate2.jpg",
+          "altText": "Chocolates Hershey's",
+          "order": "2"
+        },
+        {
+          "id": "3ec0831c-ace8-417b-b3ab-b41501ec7757",
+          "url": "https://example.com/images/hersheys-chocolate.jpg",
+          "altText": "Chocolates Hershey's",
+          "order": "1"
+        }
+      ],
+      "brand": {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "name": "Hershey"
+      },
+      "category": {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "name": "Golosinas",
+        "externalId": "CANDIES"
+      },
+      "seo": {
+        "keywords": "chocolate, chocolate con menta, hershey's",
+        "permalink": "chocolate-menta-hersheys-100gr",
+        "metaTitle": "Chocolate con Menta Hershey's 100gr",
+        "metaDescription": "Barra de chocolate con menta Hershey's de 100gr",
+        "deepLinkDescription": null
+      },
+      "stockManagement": {
+        "unit": "GRAM",
+        "quantity": 100
+      },
+      "nutritionalWarnings": [
+        "HIGH_IN_SUGAR",
+        "HIGH_IN_SATURATED_FAT"
+      ],
+      "dimensions": {
+        "heightInCm": 1.5,
+        "widthInCm": 8,
+        "lengthInCm": 15.5,
+        "weightInGrams": 102
+      },
+      "basePrice": {
+        "amount": 8.5,
+        "currency": "PEN"
+      },
+      "status": "INACTIVE",
+      "releaseDate": "2026-01-01T00:00:00",
+      "score": 10,
+      "stocks": [
+        {
+          "branchId": "dc08ce97-0e18-4039-ab4c-c436a407afc0",
+          "branchName": null,
+          "quantity": 10,
+          "stockReserved": 0,
+          "stockAvailable": 0
+        }
+      ],
+      "pricing": {
+        "base": {
+          "amount": 8.79,
+          "currency": "PEN"
+        },
+        "branches": [
+          {
+            "id": "e849d064-4186-48ad-bc7d-3a37a6c6d21f",
+            "name": null,
+            "prices": [
+              {
+                "amount": 8.49,
+                "currency": "PEN",
+                "type": "BULK",
+                "quantity": 10,
+                "volumePrice": true
+              },
+              {
+                "amount": 8.29,
+                "currency": "PEN",
+                "type": "BULK",
+                "quantity": 20,
+                "volumePrice": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

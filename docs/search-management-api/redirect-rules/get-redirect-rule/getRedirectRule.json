@@ -1,0 +1,31 @@
+{
+  "id": "A1b2C3d4E5f",
+  "name": "zapatillas urbanas",
+  "redirectUrl": "https://www.oechsle.pe/coleccion/?q=H:12719",
+  "triggerRules": {
+    "logicalOperator": "or",
+    "conditions": [
+      {
+        "term": "zapatillas urbanas",
+        "operator": "is"
+      },
+      {
+        "term": "zapatilla urbana",
+        "operator": "is"
+      },
+      {
+        "term": "zapatillas urbana",
+        "operator": "is"
+      },
+      {
+        "term": "urbanas zapatillas",
+        "operator": "is"
+      },
+      {
+        "term": "zapatillas urbans",
+        "operator": "contains"
+      }
+    ]
+  },
+  "status": "ACTIVE"
+}

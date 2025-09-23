@@ -1,0 +1,159 @@
+{
+  "id": "9aeaef40-eca1-4ec5-ae9c-d84d2f7b48ff",
+  "sku": "CHC-MNT-B456-HRS",
+  "ean": "978020137963",
+  "externalId": "candy-001",
+  "name": "Chocolate Hershey's",
+  "description": "Barra de chocolate con menta Hershey's de 100gr",
+  "images": [
+    {
+      "id": "31505654-e6b6-487e-9901-26ee3cb44be2",
+      "url": "https://example.com/images/hersheys-chocolate2.jpg",
+      "altText": "Chocolates Hershey's",
+      "order": "2"
+    },
+    {
+      "id": "3ec0831c-ace8-417b-b3ab-b41501ec7757",
+      "url": "https://example.com/images/hersheys-chocolate.jpg",
+      "altText": "Chocolates Hershey's",
+      "order": "1"
+    }
+  ],
+  "brand": {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "name": "Hershey"
+  },
+  "category": {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "name": "Golosinas",
+    "externalId": "CANDIES"
+  },
+  "showWithoutStock": true,
+  "seo": {
+    "keywords": "chocolate, chocolate con menta, hershey's",
+    "permalink": "chocolate-menta-hersheys-100gr",
+    "metaTitle": "Chocolate con Menta Hershey's 100gr",
+    "metaDescription": "Barra de chocolate con menta Hershey's de 100gr",
+    "deepLinkDescription": null
+  },
+  "stockManagement": {
+    "unit": "GRAM",
+    "quantity": 100
+  },
+  "nutritionalWarnings": [
+    "HIGH_IN_SUGAR",
+    "HIGH_IN_SATURATED_FAT"
+  ],
+  "dimensions": {
+    "heightInCm": 1.5,
+    "widthInCm": 8,
+    "lengthInCm": 15.5,
+    "weightInGrams": 102
+  },
+  "basePrice": {
+    "amount": 8.5,
+    "currency": "PEN"
+  },
+  "status": "INACTIVE",
+  "releaseDate": "2026-01-01T00:00:00",
+  "score": 10,
+  "stocks": [
+    {
+      "branchId": "b14499b2-393a-4afa-8aa1-a4ea1bd05a6e",
+      "branchName": "branch-name",
+      "quantity": 250
+    },
+    {
+      "branchId": "ee90383f-d91e-4145-866c-e5006b07d039",
+      "branchName": "branch-name",
+      "quantity": 491
+    }
+  ],
+  "pricing": {
+    "regularPrice": {
+      "amount": 1000.00,
+      "currency": "PEN"
+    },
+    "discount": {
+      "code": "code-test",
+      "type": "PERCENTAGE",
+      "value": 10.00
+    },
+    "finalPrice": {
+      "amount": 900.00,
+      "currency": "PEN"
+    },
+    "bulkPrices": [
+      {
+        "amount": 40000.00,
+        "currency": "PEN"
+      }
+    ]
+  },
+  "discount": {
+    "id": "7XgUuSANS8G",
+    "code": "PROMO-TEST",
+    "type": "PERCENTAGE",
+    "value": 20.00,
+    "branchId": null,
+    "expiration": "2025-07-25T12:00:00"
+  },
+  "finalBasePrice": {
+    "amount": 83.12,
+    "currency": "PEN"
+  },
+  "finalRegularPrices": [
+    {
+      "id": "1CwjB5Vzojs",
+      "amount": 83.12,
+      "currency": "PEN",
+      "branchId": "dddf6b64-4aad-40b0-80c6-a2ac233778b9"
+    },
+    {
+      "id": "1D9eHPrQNc5",
+      "amount": 120.72,
+      "currency": "PEN",
+      "branchId": "eddf6b64-4bbd-40b0-80c6-a2ac233778c9"
+    }
+  ],
+  "specifications": [
+    {
+      "attribute": "SIZE",
+      "attributeLabel": "Talla",
+      "value": 0
+    }
+  ],
+  "productRelations": [
+    {
+      "type": "CROSSSELLING",
+      "relatedSkus": [
+        {
+          "id": "4qD-K_8JXft",
+          "relatedProductId": "4hJjMSunMt3",
+          "relatedProductImg": "https://example.com/images/leche-gloria.jpg",
+          "relatedProductName": "Leche Gloria 650",
+          "relatedProductSku": "BLK-MED-G123-GUC-3"
+        },
+        {
+          "id": "48FOL88dfxY",
+          "relatedProductId": "78ykG_JU1Ib",
+          "relatedProductImg": "https://example.com/images/leche-gloria.jpg",
+          "relatedProductName": "Leche Gloria 700",
+          "relatedProductSku": "BLK-MED-G123-GUC-4"
+        }
+      ]
+    },
+    {
+      "type": "UPSELLING",
+      "relatedSkus": [
+        {
+          "id": "5DqPYw-czy0",
+          "relatedProductId": "78ykG_JU1Ib",
+          "relatedProductImg": "https://example.com/images/leche-gloria.jpg",
+          "relatedProductName": "Leche Gloria 700",
+          "relatedProductSku": "BLK-MED-G123-GUC-4"
+        }
+      ]
+    }
+  ]
+}

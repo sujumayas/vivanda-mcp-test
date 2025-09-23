@@ -1,0 +1,30 @@
+{
+  "externalId": "FOOD",
+  "shortName": "Alimentos",
+  "fullName": "Productos Alimenticios",
+  "description": "Todo tipo de alimentos frescos y empacados",
+  "colorHex": "#38B000",
+  "imageUrl": "https://assets.cord.pe/lib/m/food_category.png",
+  "ordinalNumber": 1,
+  "permalink": "alimentos-frescos-empacado",
+  "keywords": "comida, alimentos, frescos, orgánicos",
+  "metaTitle": "Categorías | Alimentos Frescos y Empacados",
+  "metaDescription": "Encuentra todo tipo de alimentos frescos, empacados y orgánicos para tu hogar",
+  "deepLinkDescription": "Encuentra todo tipo de alimentos frescos, empacados y orgánicos para tu hogar",
+  "children": [
+    {
+      "externalId": "FRUIT",
+      "shortName": "Frutas",
+      "fullName": "Frutas Frescas",
+      "description": "Variedad de frutas frescas de temporada",
+      "colorHex": "#FF8600",
+      "imageUrl": "https://assets.cord.pe/lib/m/fruits.png",
+      "ordinalNumber": 2,
+      "permalink": "frutas-frescas-temporada",
+      "keywords": "comida, alimentos, frescos, orgánicos",
+      "metaTitle": "Categorías | Alimentos | Frutas Frescas",
+      "metaDescription": "Las mejores frutas frescas de temporada seleccionadas para ti",
+      "deepLinkDescription": "Las mejores frutas frescas de temporada seleccionadas para ti"
+    }
+  ]
+}

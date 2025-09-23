@@ -18,6 +18,9 @@ Node + TypeScript Model Context Protocol (MCP) server providing tools to pick a 
    Required variables:
    - `BASE_URL`: API host (e.g. `https://api-qa.cord.pe/cord-rest`)
    - `AUTH_BEARER`: Optional bearer token for auth
+   - `CART_SESSION_TOKEN`: Optional session bearer to share with Claude (defaults to `AUTH_BEARER`)
+   - `WEB_BASE_URL`: Base web URL used to craft cart deep links (e.g. `https://shop-qa.cord.pe`)
+   - `CART_LINK_TEMPLATE`: Optional link template supporting `{cartId}`, `{storeId}`, `{status}`, `{branchId}` placeholders
    - `TIMEOUT_MS`: Request timeout in milliseconds
    - `STORE_ID`: Default store id exposed by `selectStore`
    - `STORE_NAME`: Optional friendly name for the default store
@@ -76,6 +79,7 @@ Example MCP server registration:
 - "Select a store" (marks the chosen store id as selected for confirmation).
 - "Search products in store 12345 for 'galleta', size 10, sorted by price_desc."
 - "List products in store 12345 with minPrice 50, maxPrice 200, sorted by score_desc."
+- "Create a cart in store 12345 with specific items" (creates or reuses the cart, bulk uploads the items, and shares a cart link plus session token guidance).
 
 ## Project Structure
 ```
@@ -83,11 +87,13 @@ mcp-search-products/
  ├─ src/
  │   ├─ index.ts
  │   ├─ client.ts
+ │   ├─ tool.cart.ts
  │   ├─ tool.search.ts
  │   ├─ tool.store.ts
  │   ├─ types.ts
  │   └─ util.ts
  ├─ test/
+ │   ├─ cart.test.ts
  │   ├─ search.test.ts
  │   └─ store.test.ts
  ├─ .env.example

@@ -1,0 +1,13 @@
+[
+  {
+    "amount": 55.90,
+    "currency": "PEN",
+    "branchId": "ab5c6d7e-8f9g-0h1i-2j3k-4l5m6n7o8p9q"
+  },
+  {
+    "amount": 300.90,
+    "currency": "PEN",
+    "quantity": 6,
+    "branchId": "ab5c6d7e-8f9g-0h1i-2j3k-4l5m6n7o8p9q"
+  }
+]

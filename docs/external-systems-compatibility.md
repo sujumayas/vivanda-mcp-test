@@ -1,0 +1,3 @@
+# Compatibilidad con sistemas externos
+
+Start typing here...

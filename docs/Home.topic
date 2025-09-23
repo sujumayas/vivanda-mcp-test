@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Home" id="Home">
+    
+    <section-starting-page>
+        <title>Core Digital Retail</title>
+        <description>
+            Core Digital Retail buscar centralizar las capaacidades necesarias para las marcas
+            de inRetail, en un único backend.
+        </description>
+
+        <spotlight>
+            <a href="reference-documentation.topic" type="documents" summary="Encuentra toda la documentación de Core Digital Retail">Documentación</a>
+            <a href="cord-apis-rests.topic" type="library" summary="Navega por la documentación de las APIs">APIs Rest</a>
+        </spotlight>
+
+    </section-starting-page>
+</topic>

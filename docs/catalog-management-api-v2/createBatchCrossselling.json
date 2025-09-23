@@ -1,0 +1,18 @@
+[
+  {
+    "productId": "ec3aa64c-646a-46aa-84da-e419d7556638",
+    "type": "CROSSSELLING",
+    "relatedSkus": [
+      "ab5c6d7e-8f9g-0h1i-2j3k-4l5m6n7o8p9q",
+      "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+    ]
+  },
+  {
+    "productId": "ec3aa64c-646a-46aa-84da-e419d7556638",
+    "type": "UPSELLING",
+    "relatedSkus": [
+      "158902bc-109d-42ee-ad33-f1ff5b03ef7f",
+      "3fca0858-34dd-4fc9-b701-78524a0a1d7b"
+    ]
+  }
+]

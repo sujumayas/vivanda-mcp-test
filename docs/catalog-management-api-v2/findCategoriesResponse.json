@@ -1,0 +1,35 @@
+{
+  "page": {
+    "number": 0,
+    "size": 0,
+    "totalElements": 0,
+    "totalPages": 0,
+    "empty": true
+  },
+  "items": [
+    {
+      "id": "0895aea3-76d4-4c22-b0a1-785e61355a87",
+      "externalId": "FOOD",
+      "shortName": "Alimentos",
+      "fullName": "Productos Alimenticios",
+      "description": "Todo tipo de alimentos frescos y empacados",
+      "colorHex": "#38B000",
+      "imageUrl": "https://assets.cord.pe/lib/m/food_category.png",
+      "keywords": "comida, alimentos, frescos, orgánicos",
+      "permalink": "alimentos-frescos-empacados-0123",
+      "metaTitle": "Categorías | Alimentos Frescos y Empacados",
+      "metaDescription": "Encuentra todo tipo de alimentos frescos, empacados y orgánicos para tu hogar",
+      "deepLinkDescription": "Encuentra todo tipo de alimentos frescos, empacados y orgánicos para tu hogar",
+      "childrenCount": 0,
+      "level": 0,
+      "productsCount": 0,
+      "parent": {
+        "id": "0895aea3-76d4-4c22-b0a1-785e61355a87",
+        "externalId": "FRUIT",
+        "shortName": "Frutas",
+        "fullName": "Frutas Frescas"
+      },
+      "status": "ACTIVE"
+    }
+  ]
+}
