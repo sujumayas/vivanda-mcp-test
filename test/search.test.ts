@@ -2,6 +2,7 @@ import { describe, expect, it, vi, beforeEach } from "vitest";
 import { searchProducts } from "../src/tool.search.js";
 import type { ProductSearchResponse } from "../src/types.js";
 import { apiGET } from "../src/client.js";
+import { logTest } from "./helpers/logger.js";
 
 vi.mock("../src/client.js", () => ({
   apiGET: vi.fn(),
@@ -33,7 +34,7 @@ describe("searchProducts tool", () => {
 
     mockedApiGET.mockResolvedValueOnce(payload);
 
-    const result = await searchProducts.handler({
+    const input = {
       storeId: "12345",
       q: "galleta",
       size: 10,
@@ -42,7 +43,13 @@ describe("searchProducts tool", () => {
       maxPrice: 100,
       categoryIds: "cat1,cat2",
       brandIds: "brandA",
-    });
+    } as const;
+
+    logTest("Invoking searchProducts with input", input);
+
+    const result = await searchProducts.handler(input);
+
+    logTest("searchProducts returned", result);
 
     expect(mockedApiGET).toHaveBeenCalledWith(
       "/catalog/v2/stores/12345/products",
@@ -61,7 +68,9 @@ describe("searchProducts tool", () => {
   });
 
   it("alerts when storeId missing", async () => {
-    await expect(searchProducts.handler({ q: "chocolate" })).rejects.toThrow(/Missing storeId/);
+    const input = { q: "chocolate" };
+    logTest("Expecting storeId validation error", input);
+    await expect(searchProducts.handler(input)).rejects.toThrow(/Missing storeId/);
   });
 
   it("applies default pagination values", async () => {
@@ -78,7 +87,12 @@ describe("searchProducts tool", () => {
 
     mockedApiGET.mockResolvedValueOnce(payload);
 
-    await searchProducts.handler({ storeId: "store-1" });
+    const input = { storeId: "store-1" } as const;
+    logTest("Invoking searchProducts with defaults", input);
+
+    await searchProducts.handler(input);
+
+    logTest("Verified default pagination parameters");
 
     expect(mockedApiGET).toHaveBeenCalledWith(
       "/catalog/v2/stores/store-1/products",
@@ -90,8 +104,8 @@ describe("searchProducts tool", () => {
   });
 
   it("rejects invalid price ranges", async () => {
-    await expect(
-      searchProducts.handler({ storeId: "store", minPrice: 100, maxPrice: 10 })
-    ).rejects.toThrow(/minPrice must be less than or equal to maxPrice/);
+    const input = { storeId: "store", minPrice: 100, maxPrice: 10 } as const;
+    logTest("Expecting validation error for price range", input);
+    await expect(searchProducts.handler(input)).rejects.toThrow(/minPrice must be less than or equal to maxPrice/);
   });
 });

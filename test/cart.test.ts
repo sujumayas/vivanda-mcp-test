@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it, vi, afterEach } from "vitest";
 import { createCartWithItems } from "../src/tool.cart.js";
 import { apiGET, apiPOST } from "../src/client.js";
 import type { CartToolResult } from "../src/types.js";
+import { logTest } from "./helpers/logger.js";
 
 vi.mock("../src/client.js", () => ({
   apiGET: vi.fn(),
@@ -73,7 +74,7 @@ describe("createCartWithItems tool", () => {
     mockedApiPOST.mockResolvedValueOnce({});
     mockedApiGET.mockResolvedValueOnce(mockCartResponse());
 
-    const result = (await createCartWithItems.handler({
+    const input = {
       storeId: "store-1",
       items: [
         {
@@ -81,7 +82,13 @@ describe("createCartWithItems tool", () => {
           quantity: 2,
         },
       ],
-    })) as CartToolResult;
+    } as const;
+
+    logTest("Creating cart with items", input);
+
+    const result = (await createCartWithItems.handler(input)) as CartToolResult;
+
+    logTest("createCartWithItems result", result);
 
     expect(mockedApiPOST).toHaveBeenNthCalledWith(1, "/shopping-cart/v2/cart", {
       storeId: "store-1",
@@ -112,7 +119,7 @@ describe("createCartWithItems tool", () => {
     mockedApiPOST.mockResolvedValue({});
     mockedApiGET.mockResolvedValue(mockCartResponse());
 
-    const result = await createCartWithItems.handler({
+    const input = {
       storeId: "store-1",
       items: [
         {
@@ -120,21 +127,29 @@ describe("createCartWithItems tool", () => {
           quantity: 1,
         },
       ],
-    });
+    } as const;
+
+    logTest("Creating cart with template link", input);
+
+    const result = await createCartWithItems.handler(input);
+
+    logTest("createCartWithItems result", result);
 
     expect((result as CartToolResult).cartLink).toBe("https://example.com/store-1/cart/cart-123");
   });
 
   it("rejects items without product identifiers", async () => {
-    await expect(
-      createCartWithItems.handler({
-        storeId: "store-1",
-        items: [
-          {
-            quantity: 1,
-          },
-        ],
-      })
-    ).rejects.toThrow(/productId or sku/);
+    const input = {
+      storeId: "store-1",
+      items: [
+        {
+          quantity: 1,
+        },
+      ],
+    } as const;
+
+    logTest("Expecting validation failure for missing identifiers", input);
+
+    await expect(createCartWithItems.handler(input)).rejects.toThrow(/productId or sku/);
   });
 });

@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "./env.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { createMcpServer } from "./mcp-server.js";
 
